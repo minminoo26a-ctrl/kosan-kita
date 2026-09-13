@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-d9df7494a7d589c71ed69fb6bcdc2fed CMakeFiles/KosanKita_autogen
-a119e08ff38ca1f37347a4cae718bdca KosanKita_autogen/timestamp

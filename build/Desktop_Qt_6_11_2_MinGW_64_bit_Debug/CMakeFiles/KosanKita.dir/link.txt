@@ -1,3 +1,0 @@
-D:\CMake\bin\cmake.exe -E rm -f CMakeFiles\KosanKita.dir/objects.a
-C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\KosanKita.dir/objects.a @CMakeFiles\KosanKita.dir\objects1.rsp
-C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\KosanKita.dir/objects.a -Wl,--no-whole-archive -o KosanKita.exe -Wl,--out-implib,libKosanKita.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\KosanKita.dir\linkLibs.rsp
