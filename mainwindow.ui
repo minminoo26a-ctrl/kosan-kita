@@ -43,6 +43,75 @@ QPushButton:hover {
 /* Efek saat tombol diklik */
 QPushButton:pressed {
     background-color: #1abc9c;
+}
+
+/* --- KARTU KAMAR (RoomCard) --- */
+QFrame#cardKamar {
+    background-color: #1E2B38;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    margin: 5px;
+}
+
+QFrame#cardKamar:hover {
+    border-color: #3498db;
+    background-color: #fafbfc;
+}
+
+/* --- TEKS &amp; BADGE DI DALAM KARTU --- */
+QLabel[objectName=&quot;lblRoomName&quot;] {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+QLabel[objectName=&quot;lblRoomPrice&quot;] {
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+QLabel[objectName=&quot;lblStatusAvail&quot;] {
+    color: #27ae60;
+    background-color: #e8f5e9;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+QLabel[objectName=&quot;lblStatusOcc&quot;] {
+    color: #c0392b;
+    background-color: #ffebee;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* --- TOMBOL DETAIL PADA KARTU --- */
+QPushButton#btnDetail {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: 600;
+}
+
+QPushButton#btnDetail:hover {
+    background-color: #2980b9;
+}
+
+QPushButton#btnDetail:pressed {
+    background-color: #1a5276;
+}
+
+QScrollArea {
+    background-color: transparent;
+}
+
+QScrollArea &gt; QWidget &gt; QWidget {
+    background-color: transparent;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -113,7 +182,35 @@ QPushButton:pressed {
       </item>
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
-        <widget class="QWidget" name="page"/>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page">
+         <widget class="QWidget" name="gridLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>60</y>
+            <width>711</width>
+            <height>651</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout"/>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>91</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Kamar Kos</string>
+          </property>
+         </widget>
+        </widget>
         <widget class="QWidget" name="page_2"/>
        </widget>
       </item>
