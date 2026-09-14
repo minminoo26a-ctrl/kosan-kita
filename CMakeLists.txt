@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(KosanKita VERSION 0.1 LANGUAGES CXX)
 
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -23,6 +24,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(KosanKita
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        resources.qrc
+
+
+
+
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET KosanKita APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

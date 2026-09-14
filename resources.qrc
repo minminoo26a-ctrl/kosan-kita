@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Icon">
+        <file>icon/kamar.png</file>
+        <file>icon/keuangan.png</file>
+        <file>icon/user.png</file>
+    </qresource>
+</RCC>
