@@ -25,14 +25,14 @@ QWidget#widget {
 /* Gaya tombol navigasi sidebar */
 QPushButton {
     background-color: transparent;
-    color: #C9C9C9;
+    color: #bdc3c7; /* Teks menu abu-abu terang */
     border: none;
     text-align: left;
-    padding: 8px 16px;
-    font-size: 12px;
-	font-weight: 600;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
     border-radius: 6px;
-    margin: 2px 8px;
+    margin: 4px 0px;
 }
 
 /* Efek saat kursor menyentuh tombol (Hover) */
@@ -54,7 +54,7 @@ QFrame#cardKamar {
 }
 
 QFrame#cardKamar:hover {
-    border-color: #3498db;
+    border-color: #ffffff;
     background-color: #fafbfc;
 }
 
@@ -112,7 +112,8 @@ QScrollArea {
 
 QScrollArea &gt; QWidget &gt; QWidget {
     background-color: transparent;
-}</string>
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -196,19 +197,6 @@ QScrollArea &gt; QWidget &gt; QWidget {
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout"/>
-         </widget>
-         <widget class="QLabel" name="label">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>20</y>
-            <width>91</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Kamar Kos</string>
-          </property>
          </widget>
         </widget>
         <widget class="QWidget" name="page_2"/>

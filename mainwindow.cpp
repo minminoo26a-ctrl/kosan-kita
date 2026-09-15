@@ -39,11 +39,24 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     /* Code Card */
+    /* Code Card */
     QScrollArea *scrollArea = new QScrollArea(ui->stackedWidget->widget(0));
     scrollArea->setWidgetResizable(true);
+    scrollArea->setFrameShape(QFrame::NoFrame);
 
     QWidget *container = new QWidget();
-    QGridLayout *gridLayout = new QGridLayout(container);
+    container->setStyleSheet("background-color: transparent;");
+
+    // Gunakan QVBoxLayout sebagai pembungkus utama di dalam container
+    QVBoxLayout *mainContainerLayout = new QVBoxLayout(container);
+
+    // (Opsional) Tambahkan Label Judul "Kamar Kos" di atas grid
+    QLabel *lblTitle = new QLabel("Kamar Kos", container);
+    lblTitle->setStyleSheet("font-size: 20px; font-weight: bold; color: #ffffff; margin-bottom: 10px;");
+    mainContainerLayout->addWidget(lblTitle);
+
+    // Grid layout untuk kartu-kartu
+    QGridLayout *gridLayout = new QGridLayout();
     gridLayout->setSpacing(15);
 
     int row = 0;
@@ -65,9 +78,16 @@ MainWindow::MainWindow(QWidget *parent)
         }
     }
 
+    // Masukkan grid ke dalam layout vertikal utama container
+    mainContainerLayout->addLayout(gridLayout);
+
+    // INI KUNCINYA: Tambahkan stretch di bawah agar grid tidak merenggang ke bawah
+    mainContainerLayout->addStretch();
+
     scrollArea->setWidget(container);
 
     QVBoxLayout *pageLayout = new QVBoxLayout(ui->stackedWidget->widget(0));
+    pageLayout->setContentsMargins(0, 0, 0, 0); // Hilangkan margin agar pas
     pageLayout->addWidget(scrollArea);
 
 }
